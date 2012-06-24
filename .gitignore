@@ -5,11 +5,10 @@
 *.war
 *.ear
 
-*.pydevproject
+# Eclipse Files #
 .project
 .metadata
 bin/**
-target/
 tmp/**
 tmp/**/*
 *.tmp
@@ -18,8 +17,11 @@ tmp/**/*
 *~.nib
 local.properties
 .classpath
-.settings/
 .loadpath
+
+# Eclipse & Maven Folders #
+.settings/
+target/
 
 # External tool builders
 .externalToolBuilders/
@@ -32,3 +34,6 @@ local.properties
 
 # PDT-specific
 .buildpath
+
+# Mac OSX
+.DS_Store
