@@ -42,7 +42,8 @@ public class XlsParser {
 
 					switch (cell.getColumnIndex()) {
 					case 1:
-						event.setDate(DateUtils.toCalendar(cell.getDateCellValue()));
+						event.setDate(DateUtils.toCalendar(cell
+								.getDateCellValue()));
 						break;
 					case 2:
 						break;
@@ -71,11 +72,14 @@ public class XlsParser {
 						event.setTitle(cell.getStringCellValue());
 						break;
 					case 7:
-						event.setRoom(String.valueOf((int)cell.getNumericCellValue()));
+						event.setRoom(String.valueOf((int) cell
+								.getNumericCellValue()));
 					default:
 					}
 				}
-				events.add(event);
+				if (event.getDate() != null) {
+					events.add(event);
+				}
 			}
 		}
 		return events;
